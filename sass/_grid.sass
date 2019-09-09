@@ -1,0 +1,32 @@
+*
+    box-sizing: border-box
+
+.container
+    max-width: 1170px
+    margin: 0 auto
+@media  (max-width: 1169px)
+    .container
+        max-width: 960px
+@media  (max-width: 991px)
+    .container
+        max-width: 750px
+@media  (max-width: 768px)
+    .container
+        max-width: 100%
+        padding: 0 20px 
+@media  (max-width: 991px)
+    .navbar
+        &__mobile, &__landline
+            display: none
+@media  (max-width: 576px)
+    .logo
+        display: none
+    .menu
+        top: 60px
+        &-button
+            height: 60px
+        &__nav
+            flex-direction: column
+        &__link
+            margin-bottom: 20px
+                 

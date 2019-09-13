@@ -83,6 +83,20 @@ body {
   color: #262626;
 }
 
+.section {
+  padding: 100px 0;
+}
+
+.section-title {
+  font-size: 30px;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+  text-align: center;
+}
+
+.section__title {
+  margin-bottom: 100px;
+}
+
 .button-o {
   border: 2px solid #501fe1;
   padding: 17px 22px;
@@ -144,6 +158,12 @@ input[type="checkbox"]:checked + label:before {
 @media (max-width: 576px) {
   .button-o {
     font-size: 10px;
+  }
+  .section {
+    padding: 60px 0;
+  }
+  .section-title {
+    font-size: 24px;
   }
 }
 
@@ -391,6 +411,42 @@ input[type="checkbox"]:checked + label:before {
   }
   .form__input {
     margin-bottom: 20px;
+  }
+}
+
+.features-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.features-block__item {
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+  text-align: center;
+  margin-bottom: 110px;
+}
+
+@media (max-width: 991px) {
+  .features-block__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+@media (max-width: 760px) {
+  .features-block__item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-bottom: 50px;
   }
 }
 /*# sourceMappingURL=style.css.map */

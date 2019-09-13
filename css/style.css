@@ -83,6 +83,10 @@ body {
   color: #262626;
 }
 
+img {
+  max-width: 100%;
+}
+
 .section {
   padding: 100px 0;
 }
@@ -98,6 +102,7 @@ body {
 }
 
 .button-o {
+  text-decoration: none;
   border: 2px solid #501fe1;
   padding: 17px 22px;
   font-size: 12px;
@@ -107,12 +112,41 @@ body {
 }
 
 .button {
+  text-decoration: none;
   padding: 25px 45px;
   text-transform: uppercase;
   border: none;
   background-color: #501fe1;
   color: #ffffff;
   font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+.button-fitting {
+  text-transform: uppercase;
+  color: #501fe1;
+  padding: 10px;
+  background: #ffffff;
+  border: none;
+  font-size: 11px;
+  height: 30px;
+}
+
+.button-add {
+  background-color: #734ce7;
+  padding: 10px;
+  font-size: 11px;
+  color: #ffffff;
+  border: none;
+  text-transform: uppercase;
+  height: 30px;
+}
+
+.button-like {
+  padding: 10px;
+  background-color: #501fe1;
+  border: none;
+  height: 30px;
+  width: 30px;
 }
 
 .bg-secondary {
@@ -447,6 +481,78 @@ input[type="checkbox"]:checked + label:before {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     margin-bottom: 50px;
+  }
+}
+
+.catalog {
+  background-color: #f5f6f8;
+}
+
+.catalog-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.catalog__link {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.catalog__link-more {
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+.catalog__description {
+  display: block;
+}
+
+.catalog-card {
+  max-width: 570px;
+  position: relative;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 7px 5px 12px rgba(0, 0, 0, 0.1);
+          box-shadow: 7px 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+.catalog-card__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.catalog-card__teg {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: rgba(80, 31, 225, 0.6);
+  padding: 10px;
+}
+
+.catalog-card__image {
+  display: block;
+}
+
+@media (max-width: 1199px) {
+  .catalog-block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .catalog-card {
+    max-width: 470px;
   }
 }
 /*# sourceMappingURL=style.css.map */

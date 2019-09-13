@@ -1,0 +1,45 @@
+.catalog
+    background-color: #f5f6f8
+    &-block
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+    &__link
+            text-align: center
+            margin-top: 60px
+            &-more
+                display: inline-block
+                margin-bottom: 24px
+    &__description
+        display: block
+    &-card
+        max-width: 570px
+        position: relative
+        margin-bottom: 30px
+        box-shadow: 7px 5px 12px rgba(0, 0, 0, 0.1)
+        &__buttons
+            display: flex
+            position: absolute
+            right: 0
+            bottom: 0
+        &__teg
+            position: absolute
+            top: 10px
+            left: 10px
+            font-size: 12px
+            text-transform: uppercase
+            color: #ffffff
+            background-color: rgba($primary, 0.6)
+            padding: 10px
+        &__image
+            display: block
+        
+
+@media ( max-width: 1199px )
+    .catalog
+        &-block
+            justify-content: center
+        &-card
+            max-width: 470px
+    
+

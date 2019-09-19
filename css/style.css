@@ -851,4 +851,26 @@ input[type="checkbox"]:checked + label:before {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
+
+.factory-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.factory-block__text {
+  margin-left: 73px;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  font-size: 20px;
+}
+
+.factory-block__image {
+  margin: 20px 0;
+}
 /*# sourceMappingURL=style.css.map */

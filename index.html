@@ -7,6 +7,8 @@
     <title>Фабрика скинали</title>
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/twentytwenty.css">
+    <link rel="stylesheet" href="css/slick.css">
   </head>
   <body>
     <header class="header">
@@ -14,7 +16,7 @@
             <div class="container">
               <nav class="menu__nav">
                 <a href="#" class="menu__link">Главная</a>
-                <a href="#" class="menu__link">Продукция</a>
+                <a href="#features" class="menu__link">Преимущества</a>
                 <a href="#" class="menu__link">Католог</a>
                 <a href="#" class="menu__link">Примеры работ</a>
                 <a href="#" class="menu__link">Примеры изображений</a>
@@ -22,8 +24,7 @@
                 <a href="#" class="menu__link">О скинали</a>
               </nav>
             </div>
-          </div>
-  
+          </div>  
       <div class="navbar">
         <div class="container">
          <div class="navbar-wrap">
@@ -44,7 +45,7 @@
             <a class="navbar__phone" href="tel:+7912234567">+7 912-23-45-67</a>
             <a href="mailto:info@mail.ru" class="navbar__email navbar__small-text">info@mail.ru</a>
           </div>
-          <button class="button-o button__navbar">Получить консультацию</button>        
+          <a href="#offer" class="button-o button__navbar">Получить консультацию</a>        
         </div>
        </div>
       </div>
@@ -55,7 +56,7 @@
           <h1 class="hero__title">Гарантия <br>минимальной цены <br>на скинали
           </h1>
           <span class="hero__subtitle">от 3 000 р/м2</span>
-          <button class="button hero__button">Заказать скинали</button>
+          <a href="#offer" class="button hero__button">Заказать скинали</a>
         </div>
       </div>
       <!-- /.hero -->
@@ -63,7 +64,7 @@
     <!-- /.header -->
 
     <main>
-      <section class="offer bg-secondary">
+      <section class="offer bg-secondary" id="offer">
         <div class="container">
           <div class="offer__block offer-block offer-block__calc-bg">
             <h2 class="offer__title">Оставьте заявку на расчет</h2>
@@ -73,7 +74,14 @@
               <div class="form__row">
                 <div class="form__group">
                   <label for="" class="form__label">Вид стекла</label>
-                  <input type="text" class="input form__input">
+                  <input type="hidden" name="type" id="select-type" value="С печатью">
+                  <div class="select form__select">
+                    <div class="select_checked">С печатью</div>
+                    <ul class="select__dropdown">
+                      <li class="select__option" data-value="С печатью">С печатью</li>
+                      <li class="select__option" data-value="Без печати">Без печати</li>
+                    </ul>
+                  </div>
                 </div>
                 <div class="form__group">
                   <label for="" class="form__label">Ширина, см</label>
@@ -115,7 +123,7 @@
         <!-- /.container -->
       </section>
       <!-- /.offer -->
-      <section class="features section">
+      <section class="features section" id="features">
         <div class="container">
           <h2 class="section-title section__title">Наши преимущества</h2>
           <div class="features-block">
@@ -432,6 +440,42 @@
         </div>
       </section>
 
+      <section class="section before">
+        <div class="container">
+            <h2 class="section-title section__title">До и после</h2>
+            <div class="before-slider-wrap">
+              <div class="before-slider">
+                <div class="before-slider__item">
+                  <div class="before-after">
+                      <img src="img/hero-bg.jpg" alt="" class="">
+                      <img src="img/hero-bg.jpg" alt="" class="">
+                  </div>
+                </div>
+                <div class="before-slider__item">
+                  <div class="before-after">
+                    <img src="img/hero-bg.jpg" alt="" class="">
+                    <img src="img/hero-bg.jpg" alt="" class="">
+                </div>
+                </div>
+                <div class="before-slider__item">
+                  <div class="before-after">
+                    <img src="img/hero-bg.jpg" alt="" class="">
+                    <img src="img/hero-bg.jpg" alt="" class="">
+                </div>
+                </div>
+              </div>
+              <div class="before-slider-arrows">
+                <button class="arrow arrow-left">
+                  <img src="img/slider/left.png" alt="">
+                </button>
+                <button class="arrow arrow-right">
+                  <img src="img/slider/right.png" alt="">
+                </button>
+              </div>
+            </div>
+        </div>
+      </section>
+
       <section class="section reviews">
         <div class="container">
           <h2 class="section-title section__title">Отзовы наших клиентов</h2>
@@ -539,11 +583,61 @@
       </section>
 
       <div class="map" id="map">
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7434abc6b67036c1d91d7cf8584c9d6f06805b1543abe2c10bebff043ec5e548&amp;width=100%25&amp;height=410&amp;lang=ru_RU&amp;scroll=true"></script>
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7434abc6b67036c1d91d7cf8584c9d6f06805b1543abe2c10bebff043ec5e548&amp;width=100%25&amp;height=410&amp;lang=ru_RU&amp;scroll=false"></script>
       </div>
+
+      <section class="section questions">
+        <div class="container">
+          <div class="questions-block">
+            <h3 class="questions__title">Остались вопросы?</h3>
+            <a href="#" class="questions__link">Задайте их менеджеру</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Подключение виджета обратной связи -->
     <script type="text/javascript" src="https://spikmi.com/Widget?Id=1659"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery.event.move.js"></script>
+    <script src="js/jquery.twentytwenty.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script>
+      $(window).load(function() {
+        $(".before-after").twentytwenty({
+          before_label: 'До', // Set a custom before label
+          after_label: 'После' // Set a custom after label
+        });
+      });
+     
+      $('.before-slider').slick({
+        draggable: false,
+        dots: true,
+        dotsClass: 'before-slider__dots',
+        prevArrow: $('.arrow-left'),
+        nextArrow: $('.arrow-right')
+      });
+
+      $('.menu-button').on('click', function(){
+        $('.menu').toggleClass('menu_active');
+      });
+
+      $('.select_checked').on('click', function(){
+        $('.select__dropdown').toggleClass('select__dropdown_open');
+      });
+
+      $('.select__option').on('click', function(){
+        var value = $(this).attr('data-value');
+        $('#select-type').val(value);
+        $('.select_checked').text(value);
+        $('.select__dropdown').toggleClass('select__dropdown_open');
+      });
+
+      $("a[href^='#']").click(function() {
+        var _href = $(this).attr("href");
+        $("html, body").animate({ scrollTop: $(_href).offset().top - 120 + "px" });
+        return false;
+      });
+    </script>
   </body>
 </html>

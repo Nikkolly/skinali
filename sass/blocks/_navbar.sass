@@ -33,8 +33,12 @@
     width: 100%
     background-color: $primary
     color: #fff
-    transition: 0.2s all
-    transform: translateY(-200%)   
+    transition: 0.2s
+    transform: translateY(-200%)
+    opacity: 0
+    &_active
+        transform: translateY(0)
+        opacity: 1 
     &__nav
         display: flex
         text-align: center
@@ -44,7 +48,6 @@
         font-size: 17px
         text-transform: uppercase
         color: #ffffff
-
     &-button
         display: flex
         flex-direction: column
@@ -56,6 +59,10 @@
         border-left: 1px solid rgba(#510bba, 0.1)
         height: 80px
         width: 70px
+        &:hover
+            cursor: pointer
+        &:focus
+            outline: none
         &__line
             width: 20px
             height: 3px

@@ -85,11 +85,11 @@
                 </div>
                 <div class="form__group">
                   <label for="" class="form__label">Ширина, см</label>
-                  <input type="text" class="input form__input">
+                  <input type="number" class="input form__input">
                 </div>
                 <div class="form__group">
                   <label for="" class="form__label">Высота, см</label>
-                  <input type="text" class="input form__input">
+                  <input type="number" class="input form__input">
                 </div>
               </div>
               <div class="form__row form__row-checkbox">
@@ -514,7 +514,7 @@
                   <input type="text" class="input form__input" placeholder="Ваше имя">
                 </div>
                 <div class="form__group">
-                  <input type="text" class="input form__input" placeholder="Ваш телефон">
+                  <input type="tel" class="input form__input" placeholder="Ваш телефон">
                 </div>
                 <div class="form__group">
                   <input type="text" class="input form__input" placeholder="Ваша цена">
@@ -602,6 +602,7 @@
     <script src="js/jquery.event.move.js"></script>
     <script src="js/jquery.twentytwenty.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
     <script>
       $(window).load(function() {
         $(".before-after").twentytwenty({
@@ -638,6 +639,8 @@
         $("html, body").animate({ scrollTop: $(_href).offset().top - 120 + "px" });
         return false;
       });
+
+      $('input[type="tel"]').mask("+7 (999) 999-99-99");
     </script>
   </body>
 </html>
